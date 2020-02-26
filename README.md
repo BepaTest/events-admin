@@ -3,5 +3,5 @@ An example project for the [react-admin-firebase](https://github.com/benwinding/
 
 ```
 username: vera@vera.com
-password: vera
+password: veravera
 ```

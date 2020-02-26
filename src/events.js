@@ -11,6 +11,7 @@ import {
   // DisabledInput,
   SimpleShowLayout,
   SimpleForm,
+  SelectArrayInput,
   ReferenceField,
   ReferenceInput,
   TextField,
@@ -21,33 +22,42 @@ import {
   RichTextField,
   SelectInput,
   FileField,
-  FileInput
+  FileInput,
+  DateInput,
+  DateTimeInput,
 } from "react-admin";
+import { TimeInput } from 'react-admin-date-inputs';
 import RichTextInput from "ra-input-rich-text";
 
-const EventFilter = (props) => (
+let Name = "";
+
+const EventTitle = ({ record }) => {
+  return <span>Evénement {record ? `"${record.title}"` : ""}</span>;
+};
+
+const EventFilter = props => (
   <Filter {...props}>
     <TextInput label="Search" source="name" alwaysOn />
   </Filter>
 );
 
-export const EventList = (props) => (
+export const EventList = props => (
   <List {...props} filters={<EventFilter />}>
     <Datagrid>
       <TextField source="name" />
-      <RichTextField source="body" />
+      <RichTextField source="description" />
       <TextField source="createdate" />
       <TextField source="lastupdate" />
       <TextField source="eventDate" />
       <ShowButton label="" />
       <EditButton label="" />
-      <DeleteButton label="" redirect={false}/>
+      <DeleteButton label="" redirect={false} undoable={false} />
     </Datagrid>
   </List>
 );
 
-export const EventShow = (props) => (
-  <Show {...props}>
+export const EventShow = props => (
+  <Show title={<EventTitle />} {...props}>
     <SimpleShowLayout>
       {/* <TextField source="id" /> */}
       <TextField source="name" />
@@ -57,30 +67,29 @@ export const EventShow = (props) => (
       <TextField source="createdate" />
       <TextField source="eventDate" />
       <TextField source="lastupdate" />
-      <RichTextField source="body" />
-      <FileField source="file.src" title="file.title" />
+      <RichTextField source="description" />
     </SimpleShowLayout>
   </Show>
 );
 
-export const EventCreate = (props) => (
-  <Create {...props} >
+export const EventCreate = props => (
+  <Create title="Création d'événement" {...props}>
     <SimpleForm>
-      <TextInput source="name" />
-      <RichTextInput source="body" />
-      <TextInput source="eventDate" />
-      {/* <ReferenceInput label="Comment" source="title" reference="comments">
-        <SelectInput optionText="title" />
-      </ReferenceInput> */}
-      <FileInput source="file" label="File" accept="application/pdf">
-        <FileField source="src" title="title" />
-      </FileInput>
+      <TextInput source="name" label="Nom d'événement" />
+      <RichTextInput source="description" />
+      <DateInput source="eventDate" label="Date d'événement"/>
+      <DateTimeInput source="published_at" />
+      <TextInput autoFocus source="image" options={{ fullWidth: true }} />
+      <ReferenceInput label="Catégorie" source="category" reference="categories">
+        <SelectInput optionText="name" />
+      </ReferenceInput>
+      
     </SimpleForm>
   </Create>
 );
 
-export const EventEdit = (props) => (
-  <Edit {...props}>
+export const EventEdit = props => (
+  <Edit title={<EventTitle />} {...props}>
     <SimpleForm>
       {/* <DisabledInput source="id" />
       <DisabledInput source="createdate" />
@@ -90,12 +99,15 @@ export const EventEdit = (props) => (
         <SelectInput optionText="title" />
       </ReferenceInput> */}
       <TextInput source="name" />
-      <RichTextInput source="body" />
-      <SelectInput source="rating" choices={[
-        { id: 1, name: 'Good' },
-        { id: 2, name: 'Okay' },
-        { id: 3, name: 'Bad' },
-      ]} />
+      <RichTextInput source="description" />
+      <SelectInput
+        source="rating"
+        choices={[
+          { id: 1, name: "Good" },
+          { id: 2, name: "Okay" },
+          { id: 3, name: "Bad" }
+        ]}
+      />
       <FileInput source="file" label="File" accept="application/pdf">
         <FileField source="src" title="title" />
       </FileInput>
