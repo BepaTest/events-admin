@@ -1,6 +1,6 @@
 import * as React from "react";
 import { EventList, EventShow, EventCreate, EventEdit } from "./events";
-import { Admin, Resource, ListGuesser } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import {
   FirebaseRealTimeSaga,
   FirebaseDataProvider,

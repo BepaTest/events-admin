@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "date-fns": "^2.0.0-beta.5",
+    "@material-ui/core": "^3.2.0",
+    "date-fns": "^2.10.0",
+    "i": "^0.3.6",
+    "npm": "^6.14.1",
     "ra-i18n-polyglot": "^3.2.3",
     "ra-input-rich-text": "^2.3.0",
     "ra-language-french": "^3.2.0",
     "react": "^16.5.1",
     "react-admin": "^2.9.9",
-    "react-admin-date-inputs": "^1.1.4",
     "react-admin-firebase": "^0.8.1",
     "react-dom": "^16.5.1",
     "react-scripts": "1.1.5",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "uuid": "^7.0.1"
   },
   "homepage": "https://benwinding.github.io/react-admin-firebase-demo/",
   "scripts": {
