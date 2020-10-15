@@ -3,10 +3,13 @@
 # dependencies
 /node_modules
 
+
+
 # testing
 /coverage
 
 # production
+/src/FIREBASE_CONFIG.js
 /build
 .firebase
 # misc
