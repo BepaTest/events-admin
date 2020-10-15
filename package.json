@@ -14,13 +14,14 @@
     "react-admin": "^2.9.9",
     "react-admin-firebase": "^0.8.1",
     "react-dom": "^16.5.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.0.3",
     "redux-saga": "^0.16.0",
     "uuid": "^7.0.1"
   },
-  "homepage": "https://benwinding.github.io/react-admin-firebase-demo/",
+  "homepage": "https://github.com/BepaTest/events-admin/",
   "scripts": {
-    "start": "BROWSER=none PORT=3333 react-scripts start",
+    "predeploy": "npm run build",
+    "start": "react-scripts start",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -28,5 +29,11 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
