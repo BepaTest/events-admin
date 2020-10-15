@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BepaTest/events-admin/precache-manifest.37322584d4596af8c97b0492dca4e95c.js"
+  "/events-admin/precache-manifest.a3bc1b68a1e82f2f433d80687c5eb0ac.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/BepaTest/events-admin/index.html", {
+workbox.routing.registerNavigationRoute("/events-admin/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

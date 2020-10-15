@@ -1,11 +1,11 @@
 {
-  "main.js": "/BepaTest/events-admin/static/js/main.a8ae49d2.chunk.js",
-  "main.js.map": "/BepaTest/events-admin/static/js/main.a8ae49d2.chunk.js.map",
-  "static/js/1.e7f31dcd.chunk.js": "/BepaTest/events-admin/static/js/1.e7f31dcd.chunk.js",
-  "static/js/1.e7f31dcd.chunk.js.map": "/BepaTest/events-admin/static/js/1.e7f31dcd.chunk.js.map",
-  "runtime~main.js": "/BepaTest/events-admin/static/js/runtime~main.8967e1a0.js",
-  "runtime~main.js.map": "/BepaTest/events-admin/static/js/runtime~main.8967e1a0.js.map",
-  "index.html": "/BepaTest/events-admin/index.html",
-  "precache-manifest.37322584d4596af8c97b0492dca4e95c.js": "/BepaTest/events-admin/precache-manifest.37322584d4596af8c97b0492dca4e95c.js",
-  "service-worker.js": "/BepaTest/events-admin/service-worker.js"
+  "main.js": "/events-admin/static/js/main.cb36049c.chunk.js",
+  "main.js.map": "/events-admin/static/js/main.cb36049c.chunk.js.map",
+  "static/js/1.c34c4f88.chunk.js": "/events-admin/static/js/1.c34c4f88.chunk.js",
+  "static/js/1.c34c4f88.chunk.js.map": "/events-admin/static/js/1.c34c4f88.chunk.js.map",
+  "runtime~main.js": "/events-admin/static/js/runtime~main.d669e2d8.js",
+  "runtime~main.js.map": "/events-admin/static/js/runtime~main.d669e2d8.js.map",
+  "index.html": "/events-admin/index.html",
+  "precache-manifest.a3bc1b68a1e82f2f433d80687c5eb0ac.js": "/events-admin/precache-manifest.a3bc1b68a1e82f2f433d80687c5eb0ac.js",
+  "service-worker.js": "/events-admin/service-worker.js"
 }
