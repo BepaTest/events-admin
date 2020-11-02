@@ -23,7 +23,7 @@ import {
   ImageInput,
   ImageField,
   DateField,
-  LongTextInput
+  LongTextInput,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
 
@@ -33,13 +33,13 @@ const EventTitle = ({ record }) => {
   return <span>Evénement {record ? `"${record.name}"` : ""}</span>;
 };
 
-const EventFilter = props => (
+const EventFilter = (props) => (
   <Filter {...props}>
     <TextInput label="Search" source="name" alwaysOn />
   </Filter>
 );
 
-export const EventList = props => (
+export const EventList = (props) => (
   <List {...props} filters={<EventFilter />}>
     <Datagrid>
       <TextField source="name" label="Nom d'événement" />
@@ -54,7 +54,7 @@ export const EventList = props => (
   </List>
 );
 
-export const EventShow = props => (
+export const EventShow = (props) => (
   <Show title={<EventTitle />} {...props}>
     <SimpleShowLayout>
       <TextField source="name" label="Nom d'événement" />
@@ -86,7 +86,7 @@ export const EventShow = props => (
   </Show>
 );
 
-export const EventCreate = props => (
+export const EventCreate = (props) => (
   <Create title="Création d'événement" {...props}>
     <SimpleForm redirect="list">
       <TextInput disabled source="id" defaultValue={() => uuidv4()} />
@@ -111,20 +111,9 @@ export const EventCreate = props => (
       >
         <ImageField source="src" title="title" />
       </ImageInput>
-      <TextInput
-        source="address.street"
-        label="Adresse d'événemet"
-      />
-      <TextInput
-        source="address.postCode"
-        label="Adresse  - code postal"
-        defaultValue="69420"
-      />
-      <TextInput
-        source="address.city"
-        label="Adresse - nom de la ville"
-        defaultValue="CONDRIEU"
-      />
+      <TextInput source="address.street" label="Adresse d'événemet" />
+      <TextInput source="address.postCode" label="Adresse  - code postal" />
+      <TextInput source="address.city" label="Adresse - nom de la ville" />
       <TextInput source="contact.name" label="Contact - Prenom" />
       <TextInput source="contact.surname" label="Contact - Nom" />
       <TextInput source="contact.phone" label="Contact - Numero de téléphone" />
@@ -132,7 +121,7 @@ export const EventCreate = props => (
   </Create>
 );
 
-export const EventEdit = props => (
+export const EventEdit = (props) => (
   <Edit title={<EventTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" defaultValue={() => uuidv4()} />
@@ -158,14 +147,8 @@ export const EventEdit = props => (
         <ImageField source="src" title="title" />
       </ImageInput>
       <TextInput source="address.street" label="Adresse d'événemet" />
-      <TextInput
-        source="address.postCode"
-        label="Adresse - code postal"
-      />
-      <TextInput
-        source="address.city"
-        label="Adresse - nom de la ville"
-      />
+      <TextInput source="address.postCode" label="Adresse - code postal" />
+      <TextInput source="address.city" label="Adresse - nom de la ville" />
       <TextInput source="contact.name" label="Contact - Prenom" />
       <TextInput source="contact.surname" label="Contact - Nom" />
       <TextInput source="contact.phone" label="Contact - Numero de téléphone" />
