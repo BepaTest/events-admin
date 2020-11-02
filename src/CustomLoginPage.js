@@ -2,16 +2,17 @@
 import React from "react";
 import { Login, LoginForm } from "react-admin";
 
-const CustomLoginForm = props => (
+const CustomLoginForm = (props) => (
   <div>
     <LoginForm {...props} />
   </div>
 );
 
-const CustomLoginPage = props => (
+const CustomLoginPage = (props) => (
   <Login
-    backgroundImage = "https://www.vins-niero.com/wp-content/uploads/2019/11/hero-vins-niero-condrieu.jpg"
-    loginForm={<CustomLoginForm />} {...props} 
+    backgroundImage="https://www.parlezmoidimmo.fr/public/files/images/ou-vivre-dans-le-rhone.jpg"
+    loginForm={<CustomLoginForm />}
+    {...props}
   />
 );
 
