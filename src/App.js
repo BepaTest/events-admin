@@ -4,7 +4,7 @@ import { Admin, Resource } from "react-admin";
 import {
   FirebaseRealTimeSaga,
   FirebaseDataProvider,
-  FirebaseAuthProvider
+  FirebaseAuthProvider,
 } from "react-admin-firebase";
 import firebase from "firebase";
 import CustomLoginPage from "./CustomLoginPage";
@@ -15,7 +15,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const options = {
   logging: true,
-  app: firebaseApp
+  app: firebaseApp,
   // rootRef: 'root_collection/some_document',
 };
 
@@ -36,7 +36,7 @@ class App extends React.Component {
         locale="fr"
         i18nProvider={i18nProvider}
       >
-        <Resource name="categories" />
+        {/* <Resource name="categories" /> */}
         <Resource
           name="evenements"
           list={EventList}
