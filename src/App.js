@@ -36,7 +36,7 @@ class App extends React.Component {
         locale="fr"
         i18nProvider={i18nProvider}
       >
-        {/* <Resource name="categories" /> */}
+        <Resource name="categories" />
         <Resource
           name="evenements"
           list={EventList}
