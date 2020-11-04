@@ -24,6 +24,7 @@ import {
   ImageField,
   DateField,
   LongTextInput,
+  required,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
 
@@ -107,6 +108,7 @@ export const EventCreate = (props) => (
         source="image"
         label="Photo"
         accept="image/*"
+        validate={required()}
         placeholder={<p>Déposez votre photo ici</p>}
       >
         <ImageField source="src" title="title" />
@@ -142,6 +144,7 @@ export const EventEdit = (props) => (
         source="image"
         label="Photo"
         accept="image/*"
+        validate={required()}
         placeholder={<p>Déposez votre photo ici</p>}
       >
         <ImageField source="src" title="title" />
