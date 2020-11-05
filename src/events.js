@@ -91,7 +91,7 @@ export const EventCreate = (props) => (
   <Create title="Création d'événement" {...props}>
     <SimpleForm redirect="list">
       <TextInput disabled source="id" defaultValue={() => uuidv4()} />
-      <TextInput source="name" label="Nom d'événement" />
+      <TextInput source="name" label="Nom d'événement" validate={required()} />
       <ReferenceInput
         source="category"
         reference="categories"
@@ -99,11 +99,23 @@ export const EventCreate = (props) => (
       >
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <DateInput source="eventDate" label="Date d'événement" />
-      <TextInput source="startTime" label="Heure de debut (HH:MM)" />
-      <TextInput source="endTime" label="Heure de fin (HH:MM)" />
+      <DateInput
+        source="eventDate"
+        label="Date d'événement"
+        validate={required()}
+      />
+      <TextInput
+        source="startTime"
+        label="Heure de debut (HH:MM)"
+        validate={required()}
+      />
+      <TextInput
+        source="endTime"
+        label="Heure de fin (HH:MM)"
+        validate={required()}
+      />
       <LongTextInput source="description" />
-      <TextInput source="price" label="Prix" />
+      <TextInput source="price" label="Prix" validate={required()} />
       <ImageInput
         source="image"
         label="Photo"
@@ -115,7 +127,11 @@ export const EventCreate = (props) => (
       </ImageInput>
       <TextInput source="address.street" label="Adresse d'événemet" />
       <TextInput source="address.postCode" label="Adresse  - code postal" />
-      <TextInput source="address.city" label="Adresse - nom de la ville" />
+      <TextInput
+        source="address.city"
+        label="Adresse - nom de la ville"
+        validate={required()}
+      />
       <TextInput source="contact.name" label="Contact - Prenom" />
       <TextInput source="contact.surname" label="Contact - Nom" />
       <TextInput source="contact.phone" label="Contact - Numero de téléphone" />
@@ -127,7 +143,7 @@ export const EventEdit = (props) => (
   <Edit title={<EventTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" defaultValue={() => uuidv4()} />
-      <TextInput source="name" label="Nom d'événement" />
+      <TextInput source="name" label="Nom d'événement" validate={required()} />
       <ReferenceInput
         source="category"
         reference="categories"
@@ -135,11 +151,23 @@ export const EventEdit = (props) => (
       >
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <DateInput source="eventDate" label="Date d'événement" />
-      <TextInput source="startTime" label="Heure de debut (HH:MM)" />
-      <TextInput source="endTime" label="Heure de fin (HH:MM)" />
+      <DateInput
+        source="eventDate"
+        label="Date d'événement"
+        validate={required()}
+      />
+      <TextInput
+        source="startTime"
+        label="Heure de debut (HH:MM)"
+        validate={required()}
+      />
+      <TextInput
+        source="endTime"
+        label="Heure de fin (HH:MM)"
+        validate={required()}
+      />
       <LongTextInput source="description" />
-      <TextInput source="price" label="Prix" />
+      <TextInput source="price" label="Prix" validate={required()} />
       <ImageInput
         source="image"
         label="Photo"
@@ -151,7 +179,11 @@ export const EventEdit = (props) => (
       </ImageInput>
       <TextInput source="address.street" label="Adresse d'événemet" />
       <TextInput source="address.postCode" label="Adresse - code postal" />
-      <TextInput source="address.city" label="Adresse - nom de la ville" />
+      <TextInput
+        source="address.city"
+        label="Adresse - nom de la ville"
+        validate={required()}
+      />
       <TextInput source="contact.name" label="Contact - Prenom" />
       <TextInput source="contact.surname" label="Contact - Nom" />
       <TextInput source="contact.phone" label="Contact - Numero de téléphone" />
