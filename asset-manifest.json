@@ -1,11 +1,11 @@
 {
-  "main.js": "/events-admin/static/js/main.a2b6c9f6.chunk.js",
-  "main.js.map": "/events-admin/static/js/main.a2b6c9f6.chunk.js.map",
-  "static/js/1.f7788932.chunk.js": "/events-admin/static/js/1.f7788932.chunk.js",
-  "static/js/1.f7788932.chunk.js.map": "/events-admin/static/js/1.f7788932.chunk.js.map",
+  "main.js": "/events-admin/static/js/main.2cac331b.chunk.js",
+  "main.js.map": "/events-admin/static/js/main.2cac331b.chunk.js.map",
+  "static/js/1.a75a2d24.chunk.js": "/events-admin/static/js/1.a75a2d24.chunk.js",
+  "static/js/1.a75a2d24.chunk.js.map": "/events-admin/static/js/1.a75a2d24.chunk.js.map",
   "runtime~main.js": "/events-admin/static/js/runtime~main.d669e2d8.js",
   "runtime~main.js.map": "/events-admin/static/js/runtime~main.d669e2d8.js.map",
   "index.html": "/events-admin/index.html",
-  "precache-manifest.5ff3dff49e8debc1cbc77e10d4501c94.js": "/events-admin/precache-manifest.5ff3dff49e8debc1cbc77e10d4501c94.js",
+  "precache-manifest.e5f88b80fc0dddee293064f01af5782a.js": "/events-admin/precache-manifest.e5f88b80fc0dddee293064f01af5782a.js",
   "service-worker.js": "/events-admin/service-worker.js"
 }
