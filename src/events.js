@@ -70,7 +70,7 @@ export const EventShow = (props) => (
       <TextField source="startTime" label="Heure de debut (HH:MM)" />
       <TextField source="endTime" label="Heure de fin (HH:MM)" />
       <TextField source="lastupdate" label="Dernier changement" />
-      <RichTextField source="description" stripTags />
+      <RichTextField source="description" />
       <TextField source="price" label="Prix" />
       <ImageField
         source="image.src"
@@ -114,7 +114,10 @@ export const EventCreate = (props) => (
         label="Heure de fin (HH:MM)"
         validate={required()}
       />
-      <LongTextInput source="description" />
+      <RichTextInput
+        source="description"
+        toolbar={[["bold", "italic", "underline", "link"]]}
+      />
       <TextInput source="price" label="Prix" validate={required()} />
       <ImageInput
         source="image"
@@ -166,7 +169,10 @@ export const EventEdit = (props) => (
         label="Heure de fin (HH:MM)"
         validate={required()}
       />
-      <LongTextInput source="description" />
+      <RichTextInput
+        source="description"
+        toolbar={[["bold", "italic", "underline", "link"]]}
+      />
       <TextInput source="price" label="Prix" validate={required()} />
       <ImageInput
         source="image"
