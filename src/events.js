@@ -26,8 +26,7 @@ import {
   required,
 } from 'react-admin'
 import RichTextInput from 'ra-input-rich-text'
-
-const { v4: uuidv4 } = require('uuid')
+import { v4 as uuidv4 } from 'uuid'
 
 const EventTitle = ({ record }) => {
   return <span>Evénement {record ? `"${record.name}"` : ''}</span>
